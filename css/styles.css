@@ -1,0 +1,457 @@
+/* Some CSS Setup - nothing to do with flexbox */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
+a {
+  color:white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background:rgba(0,0,0,0.2);
+  padding:20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition:all 0.5s;
+}
+
+a:hover {
+  background:rgba(0,0,0,0.3);
+}
+
+.toggleNav {
+  display: none;
+}
+
+img {
+  width:100%;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+input {
+  padding:10px;
+  border:0;
+}
+
+
+section, footer {
+  text-align: center;
+  background:rgba(0,0,0,0.2);
+  padding:20px;
+  margin:20px 0;
+  color:white;
+  font-weight: 100;
+}
+
+
+/* Flex Container */
+.flex-nav ul {
+  border:1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+}
+.flex-nav li{
+	flex:3;
+}
+
+.flex-nav .social{
+	flex: 1;
+}
+
+.slider-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display:flex;
+}
+
+.slider-nav li {
+  display:flex;
+  flex:2;
+}
+
+.slider-nav .arrow {
+  flex:1;
+}
+.slider-nav .arrow a {
+  font-size: 40px;
+}
+
+.slider-nav a {
+  align-items:center;
+  flex:1;
+  display:flex;
+  padding:20px 5px;
+}
+
+.slider-nav span {
+  display: block;
+  flex:1;
+  text-align: center;
+}
+/*Price selection section*/
+
+
+.plan ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan ul li {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding:10px;
+}
+
+.plan ul li:last-child {
+  border-bottom: 0;
+}
+
+.plan a {
+  text-decoration: none;
+  background:#FEFF00;
+  padding:10px;
+  color:black;
+  border-radius:4px;
+}
+
+
+.plan h2 {
+  text-transform: uppercase;
+  color:white;
+  letter-spacing: 2px;
+  text-shadow:3px 3px 0 rgba(0,0,0,0.1);
+}
+
+.price {
+  font-size: 50px;
+  font-family: serif;
+  margin: 10px 0;
+}
+
+
+/* Flex Container!!! */
+.pricing-grid {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.plan {
+  background:rgba(255,255,255,0.2);
+  margin:20px;
+  padding:20px;
+  border-radius: 4px;
+  text-align: center;
+  
+  flex:1;
+  display:flex;
+  flex-wrap:wrap;
+
+}
+
+.plan > * {
+  flex:1 1 100%;
+}
+
+.plan .cta {
+  align-self:flex-end;
+}
+
+/*Elements section */
+.item.large {
+  font-size: 15px;
+}
+
+.item.small {
+  font-size: 10px;
+}
+
+.item {
+  background:rgba(255,255,255,0.2);
+  margin:10px;
+  padding:20px;
+  font-size: 30px;
+}
+
+/* Flexbox Starts Here: */
+
+.elements{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.item{
+  flex: 1 1 calc(33.333% - 20px)
+
+}
+
+
+/* Cover section*/
+.cover  {
+  height:50vh;
+  width:100%;
+}
+
+/*Video*/
+
+.dog {
+	width: 80%;
+  height:80%;
+  -webkit-filter:blur(5px);
+  filter:blur(5px);
+  
+}
+
+/*Hack to get them to align properly */
+.flex-form > *:not([type="date"]) {
+  border-top:1px solid white;
+  border-bottom:1px solid white;
+}
+
+.flex-form input[type="submit"] {
+  background:#FF5A5F;
+  border-top: 1px solid #FF5A5F;
+  border-bottom: 1px solid #FF5A5F;
+  color:white;
+}
+
+.flex-form > * {
+  border:0;
+  padding:10px;
+  background:white;
+  line-height:50px;
+  font-size: 20px;
+  border-radius:0;
+  outline:0;
+  border-right:1px solid rgba(0,0,0,0.2);
+  -webkit-appearance:none;
+}
+
+.flex-form > *:last-child {
+  border-right: 0;
+}
+
+/*Flexbox Starts Here*/
+.cover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-form{
+  display: flex;
+  border: 10px solid rgba(0,0,0,0.3);
+}
+
+input[type='search'] {
+  flex-basis: 500px;
+}
+input[type='submit']{
+  flex-basis:200px; 
+}
+
+/*app-wrap*/
+
+a.button {
+  background:rgba(0,0,0,0.1);
+  padding:1rem 1.5rem;
+  width: auto;
+  border-radius:4px;
+}
+
+.app-wrap {
+
+  margin: 5vh auto 5vh auto;
+  border:10px solid rgba(0,0,0,0.8);
+  border-bottom-width: 70px;
+  border-radius:10px;
+  box-shadow:0 0 50px  rgba(0,0,0,0.3);
+}
+
+
+.content {
+  padding:20px;
+  background:white;
+  box-shadow:inset 0 5px 0 rgba(0,0,0,0.1);
+  line-height: 1.6;
+}
+
+.content img {
+  max-width:50%;
+  float:left;
+  margin-right: 10px;
+}
+
+
+.icon-bar a {
+  text-align: center;
+  padding:1.5rem;
+  border-left:1px solid rgba(0,0,0,0.1);
+  background:#EFCA51;
+  color:rgba(0,0,0,0.5);
+}
+
+.icon-bar a:first-child {
+  border-left: 0;
+}
+
+.icon-bar a:first-child, .icon-bar a:hover {
+  border-bottom: 5px solid rgba(0,0,0,0.1);
+}
+
+.icon-bar {
+  border-top:1px solid #E6E6E6;
+}
+
+.icon-bar i {
+  display: block;
+  font-size: 2.5rem;
+  color:white;
+  text-shadow:3px 3px 0 rgba(0,0,0,0.1);
+  padding-bottom: 1rem;
+}
+
+.app-header {
+  background:#F0CB45;
+  color:rgba(0,0,0,0.5);
+  padding:1rem;
+}
+
+/*
+  Overall Layout
+*/
+.app-wrap{
+  display: flex;
+  flex-direction: column;
+}
+
+.app-wrap > * {
+  flex: 1 1 auto;
+  font-size: 1em;
+}
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Content*/
+.content {
+  overflow: scroll;
+  -webkit-overflow: touch;
+}
+.icon-bar{
+  display: flex;
+}
+.icon-bar > * {
+    flex: 1;
+}
+
+
+
+
+@media all and (max-width:977px) {
+	.flex-nav ul{
+		flex-wrap: wrap;
+	}
+	.flex-nav li{
+		flex: 1 1 50%;
+	}
+	.flex-nav .social{
+	order: -1;
+	flex: 1 1 25%;
+	}
+	.slider-nav .arrow{
+		flex:1;
+	}
+	.slider-nav .arrow a{
+		font-size: 40px;
+	}
+	.slider-nav a {
+		align-items: center;
+		flex:1;
+		display: flex;
+		padding: 20px 5px;
+	}
+	.slider-nav span {
+		display: block;
+		flex: 1;
+		text-align: center;
+	}
+
+	.pricing-grid{
+		flex-direction: column;
+	}
+	.flex-form{
+		align-content: center;
+		flex: 0 0 100%;
+		flex-wrap: wrap;
+	}
+	.flex-form > * {
+		flex: 1 1 25%;
+	}
+/*	input[type='search'] {
+	  flex:0 1 50%;
+	}
+	input[type='submit']{
+	  flex:0 1 50%; 
+	}*/
+}
+
+@media all and (max-width:500px) {
+	.flex-nav li{
+		flex-basis: 100%;
+	}
+	/*Flex container */
+	.wrapper{
+		display: flex;
+		flex-direction: column;
+	}
+	/*Flex Item*/
+	.weapper  * {
+		order: 99;
+	}
+	.flex-nav {
+		order: -1;
+	}
+	.toggleNav {
+		display: block;
+	}
+	.flex-nav ul {
+		display: none;
+	}
+	.flex-nav ul.open {
+      display:flex;
+    }
+	/*.top{
+		order: 2;
+	}
+	.details{
+		order: 3;
+	}
+	.hero {
+		order:4;
+	}*/
+}
+
