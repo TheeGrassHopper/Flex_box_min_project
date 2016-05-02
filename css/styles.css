@@ -411,6 +411,9 @@ a.button {
 	.flex-form > * {
 		flex: 1 1 25%;
 	}
+  .toggleNav {
+    display: block;
+  }
 /*	input[type='search'] {
 	  flex:0 1 50%;
 	}
